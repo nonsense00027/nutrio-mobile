@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "947923365174",
+    "project_id": "nutrio-e0798",
+    "storage_bucket": "nutrio-e0798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947923365174:android:6723cfbfa3093426b1d797",
+        "android_client_info": {
+          "package_name": "com.nutrio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947923365174-8nbn2t4dih967kp7pr6fkusofp2q9bgk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nutrio",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "947923365174-3981r91prf9f3am2un259envr4dde1tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3BNRWnmznimNkYJdVGkwrGYwVe_18uSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947923365174-3981r91prf9f3am2un259envr4dde1tu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
