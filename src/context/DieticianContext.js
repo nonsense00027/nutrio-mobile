@@ -14,7 +14,7 @@ export const DieticianProvider = ({children}) => {
     const subscriber = firestore()
       .collection('dieticians')
       .onSnapshot(querySnapshot => {
-        setDieticians(querySnapshot.docs.map(doc => collectIdsAndDocs(doc)));
+        setDieticians(querySnapshot?.docs.map(doc => collectIdsAndDocs(doc)));
         setLoading(false);
       });
 

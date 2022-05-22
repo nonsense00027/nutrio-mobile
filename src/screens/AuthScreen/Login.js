@@ -39,6 +39,7 @@ export default function Login({navigation}) {
 
   const onLogin = () => {
     // login(email, password);
+    console.log('naa ko login');
     setLoading(true);
     auth()
       .signInWithEmailAndPassword(email, password)
@@ -47,7 +48,7 @@ export default function Login({navigation}) {
         // setAuthLoading(false);
       })
       .catch(err => {
-        // console.log(err.code);
+        console.log('error ni:', err);
         handleError(err);
         setLoading(false);
       });

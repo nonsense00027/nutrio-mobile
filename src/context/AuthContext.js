@@ -27,12 +27,13 @@ export const AuthProvider = ({children}) => {
   };
   useEffect(() => {
     auth().onAuthStateChanged(authUser => {
+      console.log('auth user: ', authUser);
       if (authUser != null) {
         firestore()
           .collection('profile')
           .doc(authUser.uid)
           .onSnapshot(doc => {
-            setUser({id: authUser.uid, ...doc.data()});
+            setUser({id: authUser.uid, ...doc?.data()});
             setAuthLoading(false);
             Keyboard.dismiss(0);
           });
@@ -52,6 +53,7 @@ export const AuthProvider = ({children}) => {
   });
 
   const login = (email, password) => {
+    console.log('logging in');
     setAuthLoading(true);
     auth()
       .signInWithEmailAndPassword(email, password)
@@ -60,7 +62,7 @@ export const AuthProvider = ({children}) => {
         // setAuthLoading(false);
       })
       .catch(err => {
-        // console.log(err.code);
+        console.log('error: ', err);
         handleError(err);
         setAuthLoading(false);
       });
